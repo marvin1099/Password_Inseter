@@ -8,13 +8,13 @@ If its correct it will ask you for the programm you want to insert the password 
 After you have entered the password and the program the first time setup is complete.
 
 
-now every time you start the script it asks you for the password,
+Now every time you start the script it asks you for the password,
 and if it is the correct one it starts the selected programm and types it in.
-after that it presses enter.
-if you dont type anything it wil just exit.
+After that it presses enter.
+If you dont type anything it wil just exit.
 
-it was made for the:
+It was made for the:
 SAM - Steam Account Manager
 https://github.com/rex706/SAM
 
-the idea is that you dont get 2 error messages.
+The idea is that you dont get 2 error messages.
