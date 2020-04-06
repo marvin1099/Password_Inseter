@@ -47,7 +47,7 @@ Loop
 		Run, %OutputVar4%, %OutputVar6%
 		sleep, 1000
 		WinActivate, ahk_exe %OutputVar5%
-		Send, %OutputVar1%
+		SendRaw, %OutputVar1%
 		Send, {Enter}
 		ExitApp
 	}
