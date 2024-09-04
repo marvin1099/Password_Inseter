@@ -14,6 +14,8 @@ and if it is the correct one, it starts the selected programm and types the pass
 After that it presses enter.  
 If you dont type anything it wil just exit.
 
+The input tester included can be used to check the function of the software.
+
 This was made for the:  
 SAM - Steam Account Manager  
 https://github.com/rex706/SAM
