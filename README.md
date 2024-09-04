@@ -14,7 +14,8 @@ and if it is the correct one, it starts the selected programm and types the pass
 After that it presses enter.  
 If you dont type anything it wil just exit.
 
-The input tester included can be used to check the function of the software.
+The input tester included can be used to check the function of the software.  
+[Donwload all files right here](https://codeberg.org/marvin1099/Password_Inseter/releases).
 
 This was made for the:  
 SAM - Steam Account Manager  
