@@ -1,5 +1,5 @@
 # Password_Inseter
-This simple python skript checks a password by hashing it with sha256 + salt
+This simple python script checks a password by hashing it + salt with sha256
 
 First time running it, will ask you for a password.  
 After that, it will ask you to repeat it.  
