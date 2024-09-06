@@ -16,7 +16,7 @@ If you dont type anything it wil just exit.
 
 The input tester included can be used to check the function of the software.  
 [Donwload all files right here](https://codeberg.org/marvin1099/Password_Inseter/releases).  
-[Or here (Linux biarrys are here if needed)](https://github.com/marvin1099/Password_Inseter/releases).
+[Or here (backup repo)](https://github.com/marvin1099/Password_Inseter/releases).
 
 This was made for the:  
 SAM - Steam Account Manager  
