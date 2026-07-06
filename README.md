@@ -51,4 +51,6 @@ Pre-compiled binaries for Linux and Windows are available, or grab the Python fi
 
 ## Tutorial Video
 
-<video src="samco.mp4" controls></video>
+![Tutorial Link, embedded below — only GitHub renders this properly](https://codeberg.org/marvin1099/Password_Inseter/media/branch/master/samco.mp4)
+
+<video src="https://github.com/user-attachments/assets/f4a3aae6-bd6d-4264-87db-b599317ac02c" controls></video>
