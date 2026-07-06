@@ -1,26 +1,54 @@
-# Password_Inseter
-This simple python script checks a password by hashing it + salt with sha256
+# Password Inseter
 
-First time running it, will ask you for a password.  
-After that, it will ask you to repeat it.  
-If it matches, it will then ask you for the programm you want to insert the password in.  
-Then you will can also set the arguments to start the program (optional).  
-Next it ask you for the progamm wait time.   
-That is how long to wait before the progam is ready to get the input (default 2s).  
-Lastly it ask you if the progam should wait for the started progam to finish (default yes)  
+A password-protected program launcher & auto-filler. On first run you set a master password, choose a target program (e.g. SAM), and save the config. Every subsequent run asks for that password before launching the program and typing the password into it — if you enter nothing, it just exits.
 
-Now every time you start the script it asks you for the password,  
-and if it is the correct one, it starts the selected programm and types the password in.  
-After that it presses enter.  
-If you dont type anything it wil just exit.
+## How it works
 
-The input tester included can be used to check the function of the software.  
-[Donwload all files right here](https://codeberg.org/marvin1099/Password_Inseter/releases).  
-[Or here (backup repo)](https://github.com/marvin1099/Password_Inseter/releases).
+- The password is salted (64 random alphanumeric chars) and hashed with **SHA-512** before storage — cracking the stored hash is not feasible.
+- The config (hash, salt, program path, args, wait time) is saved in a `password-filler.conf` INI file next to the script.
+- On login, `pyautogui` types the password into the target program and presses Enter.
 
-This was made for the:  
-SAM - Steam Account Manager  
-https://github.com/rex706/SAM
+## Usage
 
-In the past I got 2 error messages there, when the software got the wrong password / no password.  
-This avoides this, by having its own password check mecanisim.
+```bash
+python password-filler.py          # GUI mode (default)
+python password-filler.py --cli    # Terminal-only mode
+python password-filler.py --tk-theme clam  # Change tkinter theme
+```
+
+**First run:** You will be guided through setting a password, selecting the target program (with optional arguments), configuring a startup delay, and choosing whether to wait for the program to exit.
+
+**Subsequent runs:** Enter the correct password to launch the program and auto-fill the password field.
+
+## Background
+
+This was made for **SAM - Steam Account Manager** ([github.com/rex706/SAM](https://github.com/rex706/SAM)). SAM would show two error messages when given the wrong or no password. This tool avoids that entirely by handling password verification itself — the target program only ever receives the correct password.
+
+## Dependencies
+
+```
+pip install pyautogui psutil
+```
+
+- `pyautogui` — types the password into the target window
+- `psutil` — checks if the target process started successfully
+- `tkinter` — ships with Python, used for the GUI dialogs
+
+## Testing
+
+`input-tester.py` is a simple GUI that expects the password `test123`. Use it to verify that `password-filler.py` correctly auto-fills the password field.
+
+```bash
+python password-filler.py           # then select input-tester.py as the target program
+```
+
+## Downloads
+
+Pre-compiled binaries for Linux and Windows are available, or grab the Python file if you have the requirements:
+
+- [Codeberg Releases](https://codeberg.org/marvin1099/Password_Inseter/releases) (primary)
+- [GitHub Releases](https://github.com/marvin1099/Password_Inseter/releases) (backup)
+
+## Tutorial Video
+
+<video src="samco.mp4" controls></video>

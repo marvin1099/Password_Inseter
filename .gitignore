@@ -1,0 +1,6 @@
+*
+!*.py
+!*.md
+!*.mp4
+!LICENSE
+!.gitignore
